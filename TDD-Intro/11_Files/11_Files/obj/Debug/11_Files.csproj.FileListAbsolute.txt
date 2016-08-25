@@ -1,0 +1,5 @@
+c:\users\sist\documents\visual studio 2015\Projects\11_Files\11_Files\bin\Debug\11_Files.dll
+c:\users\sist\documents\visual studio 2015\Projects\11_Files\11_Files\bin\Debug\11_Files.pdb
+c:\users\sist\documents\visual studio 2015\Projects\11_Files\11_Files\obj\Debug\11_Files.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\11_Files\11_Files\obj\Debug\11_Files.dll
+c:\users\sist\documents\visual studio 2015\Projects\11_Files\11_Files\obj\Debug\11_Files.pdb

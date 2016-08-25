@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: pig latin</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+       
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li><a href="../01_Calculator/index.html">01 Calculator</a></li>
+            <li><a href="../02_Bottles/index.html">02 Bottles</a></li>
+            <li><a href="../03_Simon_Says/index.html">03 Simon Says</a></li>
+            <li>04 Pig Latin</li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>pig latin</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <p>
+                    Pig Latin
+
+                    Pig Latin is a made-up children's language that's intended to be confusing. It obeys a few simple rules (below) but when it's spoken quickly
+                    it's really difficult for non-children (and non-native speakers) to understand.
+                    Rule 1: If a word begins with a vowel sound, add an "ay" sound to the end of the word.
+                    Rule 2: If a word begins with a consonant sound, move it to the end of the word, and then add an "ay" sound to the end of the word.
+                    (There are a few more rules for edge cases, and there are regional variants too, but that should be enough to understand the tests.)
+                    See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
+                </p>
+
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>strings</li>
+                </ul>
+
+
+                <h1>Simon Says</h1>
+
+
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../04_Pig_Latin/04_Pig_Latin/PigLatinTests.cs">PigLatinTests.cs</a>
+                <pre>
+                                                                 [TestMethod]
+        public void TranslateWordBeginningWithAVowel()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("appleay", translator.Translate("apple"));
+        }
+        [TestMethod]
+        public void TranslateWordBeginningWithAConsonant()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("ananabay", translator.Translate("banana"));
+        }
+        [TestMethod]
+        public void TranslateWordBeginningWithTwoConsonants()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("errychay", translator.Translate("cherry"));
+        }
+        [TestMethod]
+        public void TranslateTwoWords()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("eatay iepay", translator.Translate("eat pie"));
+        }
+        [TestMethod]
+        public void TranslateWordBeginningWithThreeConsonants()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("eethray", translator.Translate("three"));
+        }
+        [TestMethod]
+        public void Count_SCH_AsASinglePhoneme()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("oolschay", translator.Translate("school"));
+        }
+        [TestMethod]
+        public void Count_QU_AsASinglePhoneme()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("ietquay", translator.Translate("quiet"));
+        }
+        [TestMethod]
+        public void Count_QU_AsAConsonantEvenWhenPreceededByAConsonant()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("aresquay", translator.Translate("square"));
+        }
+        [TestMethod]
+        public void TranslateManyWords()
+        {
+            Translator translator = new Translator();
+            Assert.AreEqual("ethay ickquay ownbray oxfay", translator.Translate("the quick brown fox"));
+        }
+        //Test-driving bonus:
+        // write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+        // retain the punctuation from the original phrase
+ 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

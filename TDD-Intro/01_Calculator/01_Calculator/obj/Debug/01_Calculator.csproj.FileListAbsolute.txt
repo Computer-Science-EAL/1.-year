@@ -1,0 +1,6 @@
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\obj\Debug\02_Calculator.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\bin\Debug\02_Calculator.dll
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\bin\Debug\02_Calculator.pdb
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\obj\Debug\02_Calculator.dll
+c:\users\sist\documents\visual studio 2015\Projects\02_Calculator\02_Calculator\obj\Debug\02_Calculator.pdb

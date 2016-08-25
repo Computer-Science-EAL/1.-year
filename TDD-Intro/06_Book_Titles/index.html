@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: book titles</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+      
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li><a href="../01_calculator/index.html">01 Calculator</a></li>
+            <li><a href="../02_bottles/index.html">02 Bottles</a></li>
+            <li><a href="../03_simon_Says/index.html">03 Simon Says</a></li>
+            <li><a href="../04_pig_Latin/index.html">04 Simon Says</a></li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li>06 Book titles</li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>book_titles</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <h1>Book Titles</h1>
+
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>classes and objects</li>
+                    <li>instance variables</li>
+                    <li>properties</li>
+                    <li>strings</li>
+                </ul>
+
+
+                <h1>Notes</h1>
+
+                <p>Book Titles in English obey some strange capitalization rules. For example, "and" is lowercase in "War and Peace". This test attempts to make sense of some of those rules.</p>
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../06_book_titles/06_book_titles/BookTitleTests.cs">BookTitleTests.cs</a>
+                <pre>
+                     [TestClass]
+    public class BookTitleTests
+    {
+                    private Book book;
+        [TestInitialize]
+        public void SetupForTest()
+        {
+            book = new Book();
+        }
+        [TestMethod]
+        public void ShouldCapitalizeFirstLetter()
+        {
+            book.Title = "infernal";
+            Assert.AreEqual("Infernal", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWord()
+        {
+            book.Title = "stuart little";
+            Assert.AreEqual("Stuart Little", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWordExceptThe()
+        {
+            book.Title = "alexander the great";
+            Assert.AreEqual("Alexander the Great", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWordExceptA()
+        {
+            book.Title = "to kill a mockingbird";
+            Assert.AreEqual("To Kill a Mockingbird", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWordExceptAn()
+        {
+            book.Title = "to eat an apple a day";
+            Assert.AreEqual("To Eat an Apple a Day", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWordExceptConjunctions()
+        {
+            book.Title = "war and peace";
+            Assert.AreEqual("War and Peace", book.Title);
+        }
+        [TestMethod]
+        public void ShouldCapitalizeEveryWordExceptPrepositions()
+        {
+            book.Title = "love in the time of cholera";
+            Assert.AreEqual("Love in the Time of Cholera", book.Title);
+        }
+        [TestMethod]
+        public void ShouldAlwaysCapitalizeI()
+        {
+            book.Title = "what i wish i knew when i was 20";
+            Assert.AreEqual("What I Wish I Knew When I Was 20", book.Title);
+        }
+        [TestMethod]
+        public void ShouldAlwaysCapitalizeTheFirstWord()
+        {
+            book.Title = "the man in the iron mask";
+            Assert.AreEqual("The Man in the Iron Mask", book.Title);
+        }
+} 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

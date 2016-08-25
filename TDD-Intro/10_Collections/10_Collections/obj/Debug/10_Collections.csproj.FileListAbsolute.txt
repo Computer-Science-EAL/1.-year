@@ -1,0 +1,5 @@
+c:\users\sist\documents\visual studio 2015\Projects\10_Collections\10_Collections\obj\Debug\10_Collections.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\10_Collections\10_Collections\bin\Debug\10_Collections.dll
+c:\users\sist\documents\visual studio 2015\Projects\10_Collections\10_Collections\bin\Debug\10_Collections.pdb
+c:\users\sist\documents\visual studio 2015\Projects\10_Collections\10_Collections\obj\Debug\10_Collections.dll
+c:\users\sist\documents\visual studio 2015\Projects\10_Collections\10_Collections\obj\Debug\10_Collections.pdb

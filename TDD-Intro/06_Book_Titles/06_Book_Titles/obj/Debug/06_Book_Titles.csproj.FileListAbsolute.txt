@@ -1,0 +1,6 @@
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\obj\Debug\06_Book_Titles.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\bin\Debug\06_Book_Titles.dll
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\bin\Debug\06_Book_Titles.pdb
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\obj\Debug\06_Book_Titles.dll
+c:\users\sist\documents\visual studio 2015\Projects\06_Book_Titles\06_Book_Titles\obj\Debug\06_Book_Titles.pdb

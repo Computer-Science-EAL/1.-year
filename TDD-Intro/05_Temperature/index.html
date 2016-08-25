@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: temperature</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+      
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li><a href="../01_Calculator/index.html">01 Calculator</a></li>
+            <li><a href="../02_Bottles/index.html">02 Bottles</a></li>
+            <li><a href="../03_Simon_Says/index.html">03 Simon Says</a></li>
+            <li><a href="../04_Pig_Latin/index.html">04 Pig Latin</a></li>
+            <li>05 temperature</li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>Temperature</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <p>
+                    # # Hints
+                    #
+                    # Remember that one degree fahrenheit is 5/9 of one degree celsius, and that the freezing point of water is 0 degrees celsius but 32 degrees fahrenheit.
+                    #
+                    # Remember to define the `from_celsius` factory method as a *class* method, not an *instance* method.
+                    #
+                    # The temperature object's constructor should accept an *options hash* which contains either a `:celcius` entry or a `:fahrenheit` entry.
+                    #
+                </p>
+
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>floating-point math</li>
+                    <li>
+                        objects
+                    </li>
+                    <li>
+                        constructors
+                    </li>
+                    <li>
+                        class methods
+                    </li>
+                    <li>
+                        factory methods
+                    </li>
+                </ul>
+
+
+                <h1>Temperature</h1>
+
+
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../05_Temperature/05_Temperature/TemperatureTests.cs">TemperatureTests.cs</a>
+                <pre>
+
+                                                         [TestClass]
+    public class TemperatureTest
+    {
+        //STATIC CLASSES
+        //Fahrenheit to celcius
+        [TestMethod]
+        public void ConvertFreezingTemperatureFTOC()
+        {
+            Assert.AreEqual(0, Temperature.FahrenheitToCelcius(32));
+        }
+        [TestMethod]
+        public void ConvertBoilingTemperatureFTOC()
+        {
+            Assert.AreEqual(100, Temperature.FahrenheitToCelcius(212));
+        }
+        [TestMethod]
+        public void ConvertBodyTemperatureFTOC()
+        {
+            Assert.AreEqual(37, Temperature.FahrenheitToCelcius(98.6));
+        }
+        [TestMethod]
+        public void ConvertAbitraryTemperatureFTOC()
+        {
+            Assert.AreEqual(20, Temperature.FahrenheitToCelcius(68));
+        }
+        //Celcius to Fahrenheit
+        [TestMethod]
+        public void ConvertFreezingTemperatureCTOF()
+        {
+            Assert.AreEqual(32, Temperature.CelciusToFahrenheit(0));
+        }
+        [TestMethod]
+        public void ConvertBoilingTemperatureCTOF()
+        {
+            Assert.AreEqual(212, Temperature.CelciusToFahrenheit(100));
+        }
+        [TestMethod]
+        public void ConvertBodyTemperatureCTOF()
+        {
+            Assert.AreEqual(98.6, Temperature.CelciusToFahrenheit(37));
+        }
+        [TestMethod]
+        public void ConvertArbitraryTemperatureCTOF()
+        {
+            Assert.AreEqual(68, Temperature.CelciusToFahrenheit(20));
+        }
+        //INSTANCE CLASSES
+        //Through properties & constructors
+        [TestMethod]
+        public void CanSaveDataInFahrenheitProperty()
+        {
+            var temp = new Temperature();
+            temp.Fahrenheit = 32;
+            Assert.AreEqual(32, Temperature.Fahrenheit);
+        }
+        [TestMethod]
+        public void CanSaveDataInCelciusProperty()
+        {
+            var temp = new Temperature();
+            temp.Celcius = 0;
+            Assert.AreEqual(0, Temperature.Celcius);
+        }
+        [TestMethod]
+        public void CanBeConstructedViaConstructor()
+        {
+            var temp = new Temperature(Unit.Celcius, 20);
+            Assert.AreEqual(20, Temperature.Celcius);
+        }
+        //# test-driving bonus:
+        //#
+        //# refactor to call CelciusToFahrenheit and FahrenheitToCelcius from the rest of the object
+        //#
+        //# run *all* the tests during your refactoring, to make sure you did it right
+        //#
+        //Test driven bonus. If you have read about factory methods try solving the problem below
+        [TestMethod]
+        public void CanBeConstructedViaFactoryMethod()
+        {
+            Assert.AreEqual(100, TemperatureFactory.Get(Unit.Celcius, 212));
+            Assert.AreEqual(212, TemperatureFactory.Get(Unit.Fahrenheit, 100));
+        }
+    }
+ 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

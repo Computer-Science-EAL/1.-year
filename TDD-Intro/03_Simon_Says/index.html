@@ -1,0 +1,167 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: simon says</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+      
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li><a href=" ../01_Calculator/index.html">01_Calculator</a></li>
+            <li><a href="../02_Bottles/index.html">02 Bottles</a></li>
+            <li>03 Simon Says</li>
+            <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>simon says</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>strings</li>
+                    <li>default paramters</li>
+                </ul>
+
+
+                <h1>Simon Says</h1>
+                <h2>Hints</h2>
+                <p>
+                     
+                    When you make the second `repeat` test pass, you might break the **first**
+                    
+                    <br /><br />
+                   
+                </p>
+
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../03_Simon_Says/03_Simon_Says/SimonSaysTest.cs">SimonSaysTest.cs</a>
+                <pre>
+                                                [TestMethod]
+        public void ShouldEchoHello()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("hello", simon.Echo("hello"));
+        }
+        [TestMethod]
+        public void ShouldEchoBye()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("bye", simon.Echo("Bye"));
+        }
+        [TestMethod]
+        public void ShoutHello()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("HELLO", simon.Shout("hello"));
+        }
+        [TestMethod]
+        public void ShoutMultipleWords()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("HELLO WORLD", simon.Shout("hello world"));
+        }
+        [TestMethod]
+        public void ShouldRepeat()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("hello hello", simon.Repeat("hello"));
+        }
+        // Wait a second! How can you make the "repeat" method
+        // take one *or* two arguments?
+        // Hint: "Default values"
+        [TestMethod]
+        public void ShouldRepeatANumberOfTimes()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("hello hello hello", simon.Repeat("hello", 3));
+        }
+        [TestMethod]
+        public void ShouldRepeatANumberOfTimes()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("hello hello hello", simon.Repeat("hello", 3));
+        }
+        [TestMethod]
+        public void ReturnsFirstLetterOfWord()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("h", simon.StartOfWord("hello", 1));
+        }
+        [TestMethod]
+        public void ReturnsFirstTwoLettersOfWord()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("Bo", simon.StartOfWord("Bob", 2));
+        }
+        [TestMethod]
+        public void ReturnsFirstSeveralLettersOfWord()
+        {
+            Simon simon = new Simon();
+            string s = "abcdefg";
+            Assert.AreEqual("a", simon.StartOfWord(s, 1));
+            Assert.AreEqual("ab", simon.StartOfWord(s, 2));
+            Assert.AreEqual("abc", simon.StartOfWord(s, 3));
+        }
+        [TestMethod]
+        public void ReturnsFirstWordOfHelloWorld()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("Hello", simon.FirstWord("Hello World"));
+        }
+        [TestMethod]
+        public void ReturnsFirstWordOfOhDear()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("Oh", simon.FirstWord("Oh Dear"));
+        }
+        [TestMethod]
+        public void CapitilizeAWord()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("Jaws", simon.Titleize("jaws"));
+        }
+        [TestMethod]
+        public void CapitilizeEveryWord()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("David Copperfield", simon.Titleize("david copperfield"));
+        }
+        [TestMethod]
+        public void DontCapitilizeLittleWords()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("War and Peace", simon.Titleize("war and peace"));
+        }
+        [TestMethod]
+        public void CapitilizeLittleWordsInBeginningOfSentence()
+        {
+            Simon simon = new Simon();
+            Assert.AreEqual("The Bridge over the River Kwai", simon.Titleize("the bridge over the river kwai"));
+        }
+ 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

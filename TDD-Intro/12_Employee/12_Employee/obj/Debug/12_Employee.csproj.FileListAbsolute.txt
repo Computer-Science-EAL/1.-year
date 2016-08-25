@@ -1,0 +1,6 @@
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\bin\Debug\12_Employee.dll
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\bin\Debug\12_Employee.pdb
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\obj\Debug\12_Employee.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\obj\Debug\12_Employee.dll
+c:\users\sist\documents\visual studio 2015\Projects\12_Employee\12_Employee\obj\Debug\12_Employee.pdb

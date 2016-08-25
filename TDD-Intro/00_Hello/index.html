@@ -1,0 +1,362 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: hello</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h1>Introduction to Test-First Training</h1>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+        <ul>
+            <li>00 Hello</li>
+            <li><a href="../01_calculator/index.html">01 Calculator</a></li>
+            <li><a href="../02_bottles/index.html">02 Bottles</a></li>
+            <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
+            <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+
+    <h2>Some Definitions</h2>
+
+    <p>
+        <b>Unit Testing</b> refers to writing a set of functions that
+        sit next to a given module of program code.  These functions run
+        a series of tests that assure, more-or-less thoroughly, that the
+        program code performs as it is supposed to.
+    </p>
+
+    <p>
+        For example, assume there is a function called <tt>add</tt> that
+        takes two integers as parameters, adds them together, and
+        returns their sum.  There might be one unit test that calls
+        <tt>add</tt> with 2 and 3, and makes sure the result is 5.
+        There might be additional unit tests that "push the envelope" in
+        various other ways, testing its behavior with large numbers,
+        negative numbers, illegal parameters (e.g. strings), and so
+        forth.
+    </p>
+
+    <p>
+        Once a full suite of unit tests is developed, it is good
+        practice to run these tests as often as possible.
+    </p>
+
+    <p>
+        <b>Test-First Development</b> (sometimes called <b>
+            Test-Driven
+            Development
+        </b> or <b>Test-Driven Design</b>) is the practice of
+        writing the unit tests <i>first</i>, before you write a single
+        line of implementation code.  While this may seem like putting
+        the cart before the horse, there are several good reasons why
+        you might want to do this:
+    </p>
+    <ol>
+        <li>
+            It forces you to think first about the design of the
+            <i>interface</i> to the code, instead of jumping straight to the
+            <i>implementation</i>.  Having a well-designed interface is
+            often more important than having an efficient implementation.
+        </li>
+        <li>
+            Writing tests is often seen as a chore; writing the tests
+            first guarantees that at the end of the day you will have
+            written a suite of unit tests (rather than leaving them until
+            the end and possibly never getting around to it).
+        </li>
+        <li>
+            If you apply a tight cycle of write one test, then write the
+            code to implement that test, then write the next test, your
+            code ends up growing organically.  This often (though not
+            always) leads to less wasted effort; you end up writing all
+            the code you need, and none of the code you don't need.
+        </li>
+    </ol>
+
+    <p>
+        A <b>Unit Testing Framework</b> is a tool or library that
+        provides a backdrop for writing unit tests. For example, to
+        implement a unit test in the popular
+
+        <A href="https://en.wikipedia.org/wiki/Visual_Studio_Unit_Testing_Framework">
+            MSTest framework,
+        </A>
+
+        you add a test project to a visual studio solution.
+        The project will come prefilled with a test class and a test method.
+        You can see this because the class and the test will be anotated with the word <tt>[TestClass]</tt> or <tt>[TestMethod]</tt>
+        Every method with has this annotation is a seperate unit test.
+
+        You then click on Test in the menu bar in visual studio and pick Run -> All Tests (Ctrl + R, A) and it loads your
+        class and executes each test method in turn, monitoring the
+        results and providing feedback.
+    </p>
+
+    <p>
+        <b>Test-First Training</b> follows the example of Test-First
+        Development, but with an educational twist.  In Test-First
+        Training, the student begins with a single unit test (written by
+        the teacher).  In order to implement the test, the student has
+        to create source code <i>from scratch</i>.  The student then
+        tries to compile and run the test; if the test cannot compile,
+        or if the test runs and fails, then the student must go and fix
+        his error.  He then moves on to the next test in the lesson.
+    </p>
+
+    <h2>Why Test-First Training?</h2>
+
+    <p>
+        In traditional programming exercises, you are either given a
+        fairly large task and asked to implement the whole thing, or you
+        are provided with "skeleton code" -- source code that has been
+        eviscerated to remove key sections, which you are asked to fill
+        in.
+    </p>
+
+    <p>
+        "Large task" exercises are often challenging to students because
+        of their sheer size.  Many lines of code need to be written
+        before the student receives any positive reinforcement that they
+        are on the right track.  This can be frustrating to a beginning
+        student, and boring to an advanced one.
+    </p>
+
+    <p>
+        "Skeleton code" exercises are also frustrating.  The task of the
+        student should be to figure out how to write code that will
+        accomplish the given task.  With skeleton code, they are first
+        presented with the task of figuring out what the original author
+        was trying to do; of reading through his code (often littered
+        with idiosyncratic idioms and obscure comments); and then of
+        trying to implement just one part of the algorithm he chose,
+        without necessarily understanding the larger picture.  If the
+        fill-in-the-blank code section is too complicated, he may never
+        complete the assignment; if it's too simple, he may proceed
+        without having learned a thing.
+    </p>
+
+    <p>
+        Finally, in both types of traditional exercises, the student
+        doesn't really know when he's finished!  Sometimes, he will
+        succeed in the task, but neglect to print his results, and will
+        keep at it, believing he's still missing something; other times,
+        he will write code that seems to work but is crucially flawed in
+        some way or another. This is one of the most powerful features
+        of test-first development -- you code until the test passes, and
+        then you stop coding.  The test provides a map to the student,
+        informing him of where to begin, and where to end.
+    </p>
+
+    <p>
+        Test-first training is appropriate for both local and remote
+        use.  If a student is in a classroom, he may rely on his
+        classmates or teachers for guidance; but if he is alone, the
+        tests provide some measure of feedback and guidance (although
+        unit tests can never actually debug his code).
+    </p>
+
+    <p>
+        Perhaps the most important aspect of test-first training is that
+        it teaches the whole process, from opening a new file in a text
+        editor to compiling and running.  At the end of the day, the
+        students can say, "At least I know how to write a program."
+        Many exercises, especially skeletons but also those based on
+        tools and toy problems, end up skipping the fundamentals that
+        are vital not just for coding on a day-to-day basis, but also
+        for cementing the higher-level concepts into habits and skills.
+        (For a C# example, if a student is always provided with a
+        skeleton <tt>main()</tt> method, he may end up never memorizing
+        the cryptic but essential incantation, "<tt>
+            public static void
+            main(String[] args)
+        </tt>").
+    </p>
+
+    <h2>How To Use These Exercises</h2>
+
+    <p>
+        The exercises are divided into modules.  Each module contains
+        several tests.  For each test, you are to write all the code to
+        make it run.  Let's walk through this process for a sample
+        module.  (Here we assume that you've already visual studio and configured
+        it for your system.)
+    </p>
+    <ol>
+        <li>
+            On your file system, in the same directory as this file, locate the following file <tt>00_Hello.sln</tt> and double click it.
+            This should open visual studio.
+            <br /><br />
+        </li>
+        <li>
+            Now choose UnitTest1.cs from the solution explorer window.
+            <br /><br />
+        </li>
+        <li>
+            At the bottom of the screen you will probably see two identical error messages.
+            This is because visual studio has tried to compile the unit tests for us.
+            If you cannot see them, go to View -> Error List.
+            <br /><br />
+        </li>
+
+        <li>
+            The error messages will look
+            something like this:
+            <pre>
+                CS0246	The type or namespace name 'Intro' could not be found
+ (are you missing a using directive or an assembly reference?)	00_Hello
+	C:\Users\zzz\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs	12
+	</pre>
+
+            This is the .Net compiler telling you that you need an object
+            (class) named Intro.
+            <br /><br />
+        </li>
+        <li>
+            So we need to create a class named Intro.
+            The errors mirror the red squiggly lines in the code. So right click on one of the squiggly lines and pick <tt>Quick Actions...</tt>
+            This brings up a few possible fixes to your problem. You can pick the one saying: <tt>
+                Generate class for 'Intro' in '_00_Hello' (in new file)
+            </tt>
+            Tests and Actual code should always be kept in seperate files.
+
+            Your new class should look like this:
+            <pre>
+internal class Intro
+{
+}
+	</pre>
+
+            This is the way you create a "stub class", or an object that
+            doesn't do anything yet.
+
+            (capitalization <b>
+                is very
+                important
+            </b> in C#, so make sure the "I" is capitalized),
+            <br /><br />
+        </li>
+        <li>
+            Try to compile your solution again by clicking
+            <pre>Build -> Build Solution.</pre>
+            <br /><br />
+        </li>
+        <li>
+            It should fail again!  This time, the message will be
+            something like:
+            <pre>
+               CS1061	'Intro' does not contain a definition for 'Hello' and no extension method
+ 'Hello' accepting a first argument of type 'Intro' could be found
+ (are you missing a using directive or an assembly reference?)	00_Hello
+	C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs	13
+	</pre>
+
+            This is typical for test-first development.  You may have to
+            mess with your implementation code several times before the
+            test will compile.  (This is partly because C# is a
+            <b>strongly typed</b> language, and refuses to cooperate until
+            it has a lot of information about the other classes in your
+            world.)
+
+            <br /><br />
+        </li>
+        <li>
+            Make Intro.cs look like this:
+            <pre>
+public class Intro
+{
+    public String Hello()
+    {
+        return "Goodbye";
+    }
+}
+	</pre>
+            <br /><br />
+        </li>
+        <li>
+            Compile the test one more time.
+
+            <br /><br />
+        </li>
+        <li>
+            Now run the test, using the <tt>Test Explorer</tt> Test -> Windows -> Test Explorer.
+            <pre>Run all</pre>
+            <br /><br />
+        </li>
+        <li>
+            This should also fail!  (Are you getting used to failure yet?)
+            This is meant to simulate you not getting the answer right the
+            first time.  You should see a message like:
+            <pre>
+Test Name:	TestHello
+Test FullName:	_00_Hello.UnitTest1.TestHello
+Test Source:	C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs : line 11
+Test Outcome:	Failed
+Test Duration:	0:00:00,0729017
+Result StackTrace:	ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs:linje 13
+Result Message:	Assert.AreEqual failed. Expected:&lt;Hello&gt;. Actual:&lt;Goodbye&gt;.
+Running IntroTest0
+testHello...FAILURE
+	</pre>
+            This is the Test program telling you that it tried to run the
+            test case called "TestHello" but it failed.  The test case was
+            expecting to get back the string "Hello" but instead, it got
+            the string "Goodbye".  To be helpful, it lists the exact
+            source file and line number where the assertion was made.
+            Count down the list of lines until you see the one caused
+            by your specific test case.
+            <pre>ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs:linje 13</pre>
+            Open up this file (UnitTest1.cs) and look at line 13.
+            <pre>Assert.AreEqual("Hello", x.Hello());</pre>
+            This gives you a big hint that the problem is somewhere inside
+            the method called <tt>Hello()</tt>.
+            <br /><br />
+        </li>
+        <li>
+            Go back to Intro.cs and fix it.
+            <pre>
+public class Intro
+{
+    public String Hello()
+    {
+        return "Hello";
+    }
+}
+	</pre>
+            <br /><br />
+        </li>
+        <li>
+            Recompile and rerun the test. (Always be sure to recompile!)
+            <pre>
+	</pre>
+            <br /><br />
+        </li>
+        <li>
+            Now, for extra credit, uncomment the other test method <pre>TestHelloFred()</pre>  by removing the preceding slashes. Compile and and try to make it pass.
+            <br /><br />
+        </li>
+    </ol>
+
+    <p>
+        Still with me?  Good!  You are now ready to begin.  For each
+        module, try to make each test pass, in numerical order.  Each
+        module has an index.html page that gives you background on the
+        programming tasks, and hints on how to complete individual
+        tests.
+    </p>
+
+
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

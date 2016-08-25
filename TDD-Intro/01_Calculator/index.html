@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: calculator</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li>01 Calculator</li>
+            <li><a href="../02_bottles/index.html">02 Bottles</a></li>
+            <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
+            <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>calculator</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>methods</li>
+                    <li>math</li>
+                    <li>arrays</li>
+                    <li>looping</li>
+                </ul>
+
+
+                <h1>Calculator</h1>
+
+                <p>you will build a simple calculator program with the following methods:</p>
+
+                <p><code>add</code> takes two parameters and adds them</p>
+
+                <p><code>subtract</code> takes two parameters and subtracts the second from the first</p>
+
+                <p><code>sum</code> takes an <em>array</em> of parameters and adds them all together</p>
+
+                <h1>Warning</h1>
+
+                <p>
+                    You may not have enough knowledge yet to complete <code>sum</code>. You will probably
+                    need to use <strong>loops</strong> (e.g. <code>while</code>) or <strong>iterators</strong> (e.g. <code>foreach</code>) to
+                    get the tests to pass.
+                </p>
+
+                <h1>Bonus</h1>
+
+                <p>There are also some bonus exercises for when you finish the regular ones. The bonus round will help teach you test-driven <em>development</em>, not simply test-guided <em>learning</em>.</p>
+
+                <p>Your mission, should you choose to accept it, is to write <em>tests</em> for three new methods:</p>
+
+                <ul>
+                    <li><code>multiply</code> which multiplies two numbers together</li>
+                    <li><code>power</code> which raises one number to the power of another number</li>
+                    <li><code>[factorial](http://en.wikipedia.org/wiki/Factorial)</code> (check Wikipedia if you forgot your high school math).</li>
+                </ul>
+
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../01_Calculator/01_Calculator/CalculatorTest.cs">CalculatorTest.cs</a>
+                <pre>
+        [TestMethod]
+        public void Add()
+        {
+            Assert.AreEqual(0, Calculator.Add(0, 0));
+            Assert.AreEqual(4, Calculator.Add(2, 2));
+            Assert.AreEqual(8, Calculator.Add(2, 6));
+        }
+        [TestMethod]
+        public void Subtract()
+        {
+            Assert.AreEqual(6, Calculator.Subtract(10, 4));
+        }
+        [TestMethod]
+        public void Sum()
+        {
+            //Arrange
+            int[] numbers = new int[] { };
+            Assert.AreEqual(0, Calculator.Sum(numbers));
+            numbers[0] = 7;
+            Assert.AreEqual(7, Calculator.Sum(numbers));
+            numbers[0] = 7;
+            numbers[1] = 11;
+            Assert.AreEqual(18, Calculator.Sum(numbers));
+        }
+        // Extra Credit Test-Driving Bonus:
+// once the above tests pass,
+// write tests and code for the following:
+//(the throw new NotImplementedException() is there to force failure until you make the unit test pass.
+// Otherwise it could look like the name alone made it pass, so make sure you remove NotImplementedException() once you add your own logic.)
+        [TestMethod]
+        public void Multiply()
+        {
+            //It multiplies two numbers
+            //It multiplies several numbers
+            throw new NotImplementedException();
+        }
+        [TestMethod]
+        public void Power()
+        {
+            //It raises one number to the power of another number
+            throw new NotImplementedException();
+        }
+        [TestMethod]
+        public void Factorial()
+        {
+            //# http://en.wikipedia.org/wiki/Factorial
+            //  it "computes the factorial of 0"
+            //  it "computes the factorial of 1"
+            //  it "computes the factorial of 2"
+            //  it "computes the factorial of 5"
+            //  it "computes the factorial of 10"
+            throw new NotImplementedException();
+        }      
+ 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

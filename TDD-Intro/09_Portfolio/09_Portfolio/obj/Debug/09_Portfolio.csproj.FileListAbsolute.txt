@@ -1,0 +1,6 @@
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\bin\Debug\09_Portfolio.dll
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\bin\Debug\09_Portfolio.pdb
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\obj\Debug\09_Portfolio.csprojResolveAssemblyReference.cache
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\obj\Debug\09_Portfolio.dll
+C:\Users\sist\Documents\Visual Studio 2015\Projects\09_Portfolio\09_Portfolio\obj\Debug\09_Portfolio.pdb

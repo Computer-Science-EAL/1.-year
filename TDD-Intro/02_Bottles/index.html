@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Test-First Teaching: learn_c-sharp: bottles</title>
+    <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+        <h2>the home of test-first teaching</h2>
+    </div>
+    <div class="nav">
+        <h2><a href="../index.html">learn_c-sharp</a></h2>
+        <b>Labs:</b>
+
+        <ul>
+            <li><a href="../00_hello/index.html">00 Hello</a></li>
+            <li><a href=" ../01_Calculator/index.html"</a>01_Calculator</li>
+            <li>02 Bottles</li>
+            <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
+            <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
+            <li><a href="../05_temperature/index.html">05 Temperature</a></li>
+            <li><a href="../06_book_titles/index.html">06 Book titles</a></li>
+            <li><a href="../07_timer/index.html">07 Timer</a></li>
+            <li><a href="../08_orange_tree/index.html">08 Orange Tree</a></li>
+            <li><a href="../09_portfolio/index.html">09 Portfolio</a></li>
+            <li><a href="../10_collections/index.html">10 Collections</a></li>
+            <li><a href="../11_file/index.html">11 File</a></li>
+            <li><a href="../12_employee/index.html">12 Employee</a></li>
+        </ul>
+    </div>
+    <h1>bottles</h1>
+    <div class="content">
+        <div class="rspec_file">
+            <div class="intro">
+                <h1>Topics</h1>
+
+                <ul>
+                    <li>looping</li>
+                </ul>
+
+
+                <h1>Bottles</h1>
+
+                <p>
+                    Ninety-nine Bottles Of Beer On The Wall is a famous drinking song.
+                    After you make these tests pass, put the following line in your code if you want to play the full song
+                    <br /><br />
+                    Song.CountBottles(99)
+
+                </p>
+
+                <ul>
+                    <li><code>NoBottles</code> writes: no more bottles on the wall if number is 0</li>
+                    <li><code>CountDownFromOne</code> counts down from one, and writes the appropriate text</li>
+                    <li><code>CountDownFromTwo</code> counts down from two, and writes the appropriate text</li>
+                    <li><code>CountDownFromThree</code> counts down from three, and writes the appropriate text</li>
+                </ul>
+
+            </div>
+            <div class="tests">
+                <h1>Tests</h1>
+                <a class="raw_file" href="../02_Bottles/02_Bottles/BottlesTest.cs">BottlesTest.cs</a>
+                <pre>
+                            [TestMethod]
+        public void NoBottles()
+        {
+            Song song = new Song();
+            song.CountBottles(0) = " No more bottles of beer on the wall.";
+        }
+        [TestMethod]
+        public void CountDownFromOne()
+        {
+            Song song = new Song();
+            song.CountBottles(1) = "1 bottle of beer on the wall."
+                + " 1 bottle of beer."
+                + " Take one down and pass it around."
+                + " No more bottles of beer on the wall.";
+        }
+        [TestMethod]
+        public void CountDownFromTwo()
+        {
+            Song song = new Song();
+            song.CountBottles(2) = "2 bottles of beer on the wall."
+                + " 2 bottles of beer."
+                + " Take one down and pass it around."
+                + " 1 bottle of beer on the wall."
+                + " 1 bottle of beer on the wall."
+                + " 1 bottle of beer."
+                + " Take one down and pass it around."
+                + " No more bottles of beer on the wall.";
+        }
+        [TestMethod]
+        public void CountDownFromThree()
+        {
+            Song song = new Song();
+            song.CountBottles(3) = "3 bottles of beer on the wall."
+                + " 3 bottles of beer."
+                + " Take one down and pass it around."
+                + " 2 bottles of beer on the wall."
+                + " 2 bottles of beer on the wall."
+                + " 2 bottles of beer."
+                + " Take one down and pass it around."
+                + " 1 bottle of beer on the wall."
+                + " 1 bottle of beer on the wall."
+                + " 1 bottle of beer."
+                + " Take one down and pass it around."
+                + " No more bottles of beer on the wall.";
+        }  
+ 
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+</body>
+</html>

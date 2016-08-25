@@ -1,0 +1,7 @@
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\bin\Debug\01_Temperature.dll
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\bin\Debug\01_Temperature.pdb
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\bin\Debug\NSpec.dll
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\obj\Debug\01_Temperature.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\obj\Debug\01_Temperature.dll
+c:\users\sist\documents\visual studio 2015\Projects\01_Temperature\01_Temperature\obj\Debug\01_Temperature.pdb

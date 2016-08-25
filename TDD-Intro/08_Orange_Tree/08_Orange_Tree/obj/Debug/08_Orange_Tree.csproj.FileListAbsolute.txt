@@ -1,0 +1,6 @@
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\bin\Debug\08_Orange_Tree.dll
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\bin\Debug\08_Orange_Tree.pdb
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\obj\Debug\08_Orange_Tree.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\obj\Debug\08_Orange_Tree.dll
+c:\users\sist\documents\visual studio 2015\Projects\08_Orange_Tree\08_Orange_Tree\obj\Debug\08_Orange_Tree.pdb

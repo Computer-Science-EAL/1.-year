@@ -214,26 +214,26 @@
             The error messages will look
             something like this:
             <pre>
-                CS0246	The type or namespace name 'Intro' could not be found
+                CS0246	The type or namespace name 'Functions' could not be found
  (are you missing a using directive or an assembly reference?)	00_Hello
-	C:\Users\zzz\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs	12
+	C:\Users\zzz\1.Year\00_Hello\00_Hello\UnitTest1.cs	12
 	</pre>
 
             This is the .Net compiler telling you that you need an object
-            (class) named Intro.
+            (class) named Functions.
             <br /><br />
         </li>
         <li>
-            So we need to create a class named Intro.
+            So we need to create a class named Functions.
             The errors mirror the red squiggly lines in the code. So right click on one of the squiggly lines and pick <tt>Quick Actions...</tt>
             This brings up a few possible fixes to your problem. You can pick the one saying: <tt>
-                Generate class for 'Intro' in '_00_Hello' (in new file)
+                Generate class for 'Functions' in '_00_Hello' (in new file)
             </tt>
             Tests and Actual code should always be kept in seperate files.
 
             Your new class should look like this:
             <pre>
-internal class Intro
+internal class Functions
 {
 }
 	</pre>
@@ -256,10 +256,10 @@ internal class Intro
             It should fail again!  This time, the message will be
             something like:
             <pre>
-               CS1061	'Intro' does not contain a definition for 'Hello' and no extension method
- 'Hello' accepting a first argument of type 'Intro' could be found
+               CS1061	'Functions' does not contain a definition for 'Hello' and no extension method
+ 'Hello' accepting a first argument of type 'Functions' could be found
  (are you missing a using directive or an assembly reference?)	00_Hello
-	C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs	13
+	C:\Users\zzz\Documents\1.Year\00_Hello\00_Hello\UnitTest1.cs	13
 	</pre>
 
             This is typical for test-first development.  You may have to
@@ -272,9 +272,9 @@ internal class Intro
             <br /><br />
         </li>
         <li>
-            Make Intro.cs look like this:
+            Make Functions.cs look like this:
             <pre>
-public class Intro
+public class Functions
 {
     public String Hello()
     {
@@ -301,12 +301,12 @@ public class Intro
             <pre>
 Test Name:	TestHello
 Test FullName:	_00_Hello.UnitTest1.TestHello
-Test Source:	C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs : line 11
+Test Source:	C:\Users\zzz\Documents\1.Year\00_Hello\00_Hello\UnitTest1.cs : line 11
 Test Outcome:	Failed
 Test Duration:	0:00:00,0729017
-Result StackTrace:	ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs:linje 13
+Result StackTrace:	ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\1.Year\00_Hello\00_Hello\UnitTest1.cs:linje 13
 Result Message:	Assert.AreEqual failed. Expected:&lt;Hello&gt;. Actual:&lt;Goodbye&gt;.
-Running IntroTest0
+Running FunctionsTest0
 testHello...FAILURE
 	</pre>
             This is the Test program telling you that it tried to run the
@@ -316,7 +316,7 @@ testHello...FAILURE
             source file and line number where the assertion was made.
             Count down the list of lines until you see the one caused
             by your specific test case.
-            <pre>ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\Learn_C-Sharp-Intro\00_Hello\00_Hello\UnitTest1.cs:linje 13</pre>
+            <pre>ved _00_Hello.UnitTest1.TestHello() i C:\Users\zzz\Documents\1.Year\00_Hello\00_Hello\UnitTest1.cs:linje 13</pre>
             Open up this file (UnitTest1.cs) and look at line 13.
             <pre>Assert.AreEqual("Hello", x.Hello());</pre>
             This gives you a big hint that the problem is somewhere inside
@@ -324,9 +324,9 @@ testHello...FAILURE
             <br /><br />
         </li>
         <li>
-            Go back to Intro.cs and fix it.
+            Go back to Functions.cs and fix it.
             <pre>
-public class Intro
+public class Functions
 {
     public String Hello()
     {

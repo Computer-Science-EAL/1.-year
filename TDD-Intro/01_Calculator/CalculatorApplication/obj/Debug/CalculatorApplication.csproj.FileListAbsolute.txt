@@ -1,0 +1,1 @@
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\01_Calculator\CalculatorApplication\bin\Debug\CalculatorApplication.exe.config

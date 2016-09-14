@@ -58,27 +58,31 @@ namespace _05_Temperature
         //INSTANCE CLASSES
 
         //Through properties & constructors
+        
+
         [TestMethod]
         public void CanSaveDataInFahrenheitProperty()
         {
             var temp = new Temperature();
             temp.Fahrenheit = 32;
-            Assert.AreEqual(32, Temperature.Fahrenheit);
+            Assert.AreEqual(32, temp.Fahrenheit);
         }
         [TestMethod]
         public void CanSaveDataInCelciusProperty()
         {
             var temp = new Temperature();
             temp.Celcius = 0;
-            Assert.AreEqual(0, Temperature.Celcius);
+            Assert.AreEqual(0, temp.Celcius);
         }
         [TestMethod]
         public void CanBeConstructedViaConstructor()
         {
-            var temp = new Temperature(Unit.Celcius, 20);
-            Assert.AreEqual(20, Temperature.Celcius);
-        }
+            var temp = new Temperature(Unit.Celcius, 20); //Use Enum
+            Assert.AreEqual(20, temp.Celcius);
 
+            temp = new Temperature(Unit.Fahrenheit, 20); //Use Enum
+            Assert.AreEqual(20, temp.Fahrenheit);
+        }
 
         //# test-driving bonus:
         //#
@@ -93,10 +97,24 @@ namespace _05_Temperature
         [TestMethod]
         public void CanBeConstructedViaFactoryMethod()
         {
-            Assert.AreEqual(100, TemperatureFactory.Get(Unit.Celcius, 212));
-            Assert.AreEqual(212, TemperatureFactory.Get(Unit.Fahrenheit, 100));
-        }
+            ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+            Assert.IsInstanceOfType(temp, typeof(Celcius)); //Pay attention to the order of the parameters in IsInstanceOfType
 
+        }
+        [TestMethod]
+        public void FactoryMethodCovertsCorrectlyFromFahrenheitToCelcius()
+        {
+            ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+            Assert.AreEqual(100, (temp as Celcius).Convert(212));
+            Assert.AreEqual(100, temp.Convert(212));
+        }
+        [TestMethod]
+        public void FactoryMethodCovertsCorrectlyFromCelciusToFahrenheit()
+        {
+            ITemperature temp = TemperatureFactory.Get(Unit.Fahrenheit); //Use Enum
+            Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
+            Assert.AreEqual(212, temp.Convert(100));
+        }
 
     }
 }

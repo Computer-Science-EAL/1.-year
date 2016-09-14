@@ -1,0 +1,6 @@
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\bin\Debug\02_Bottles.dll
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\bin\Debug\02_Bottles.pdb
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\obj\Debug\02_Bottles.csprojResolveAssemblyReference.cache
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\obj\Debug\02_Bottles.dll
+C:\Users\sist\Documents\GitHub\1.-year\TDD-Intro\02_Bottles\02_Bottles\obj\Debug\02_Bottles.pdb

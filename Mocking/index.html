@@ -5,53 +5,49 @@
 </head>
 <body>
     <div class="header">
-        <h1>Computer Science, EAL</h1>>
-       
+        <h1>Computer Science, EAL</h1>
+
     </div>
-    
-           
+
     <div class="content">
         <div class="rspec_file">
             <div class="intro">
-                <h1>Mocking</h1>
+                <h2>Mocking</h2>
 
-                <h1>Topic</h1>
-
-                <ul>
-                    <li>Mocks</li>
-                    
-                </ul>
-                
-                <p>– learning to avoid testing elements that are out of your control.</p>
-
+                <h3>– learning to avoid testing elements that are out of your control.</h3>
 
                 <h3>The Story:</h3>
                 <p>
                     You have been hired to create a system, which requires users to log in before any other actions can be taken, but the customer says he hasn’t decided on whether to go with Facebook login, Google login, or a custom made login module yet (or even a combination).
-                    Luckily, login modules are reasonably generic in the buildup, so you can simply code against an interface. However, in order to get a response from the interface, you have to fake the calls to the login interface.
-                    This is where you remember mocks!
-                    The system you will be building is a system for handling paychecks. An admin user can log in with the correct credentials and get rights to view the employees’ salaries, calculate weekly pay, send “mail” to the employees etc., but an employee who has the wrong credentials cannot – remember, you are NOT building the login system.
+                </p>
+                <p>Luckily, login modules are reasonably generic in the buildup, so you can simply code against an interface. However, in order to get a response from the interface, you have to fake the calls to the login interface.
+                <p>This is where you remember mocks!</p>
+                <p>The system you will be building is a system for handling paychecks. An admin user can log in with the correct credentials and get rights to view the employees’ salaries, calculate weekly pay, send “mail” to the employees etc., but an employee who has the wrong credentials cannot – remember, you are NOT building the login system.</p>
+                <p>
                     When sending “mails”, you realize, the “mail” server hasn’t been set up yet, so you have to mock that out too.
                 </p>
 
                 <h3> Procedure:</h3>
                 <p>
                     In the first six tests, you work along the usual way: Red – Green – Refactor. Afterwards, you have only been given test names. You should (along with the person sitting next to you) figure out, what the tests should include, add the tests, and solve the tests.
-                    And yes! Each test requires at least one mock!
                 </p>
+                <p>    And yes! Each test requires at least one mock!</p>
+
 
 
                 <h3> Hints:</h3>
                 <p>
                     Interfaces to the different systems you have to mock have been provided for you. If you want to extend the interfaces, you should create your own interface, which “inherits” the original interface and mock that instead.
-                    The interface to the employee repository is taken from exercise 12_Employee, by extracting it. This gives you a little inside to, on the one hand, knowing what it could include, on the other hand thinking about it in an abstract manner.
-                    Moreover, here is the documentation for moq with examples: https://github.com/Moq/moq4/wiki/Quickstart
-                    Be aware that, when using callback, the call is not actually executed until you use the mock.object syntax ie. mockMail.Object.SendMail(message);
+                </p>
+                <p>The interface to the employee repository is taken from exercise 12_Employee, by extracting it. This gives you a little inside to, on the one hand, knowing what it could include, on the other hand thinking about it in an abstract manner.</p>
+                <p>Moreover, here is the documentation for moq with examples:<a href="https://github.com/Moq/moq4/wiki/Quickstart">Moq Quickstart</a></p>
+                <p>
+                    Be aware that, when using callback, the call is not actually executed until you use the mock.object syntax ie.<pre> mockMail.Object.SendMail(message);</pre>
                 </p>
 
             </div>
         </div>
     </div>
-    <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
+    <div class="footer"><a href="http://eal.dk">EAL</a></div>
 </body>
 </html>

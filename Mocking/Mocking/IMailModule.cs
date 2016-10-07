@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mocking
 {
-    interface IMailModule
+    public interface IMailModule
     {
+        void SendMail(Mail mail, Employee employee);
+        Mail GetEmailById(int id);
+        void AddToDraft(Mail mail);
+        void AddToSentMessages(Mail mail);
+        void AddToSentSpam(Mail mail);
+        List<Mail> GetAllMail();
     }
 }

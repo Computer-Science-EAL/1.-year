@@ -1,0 +1,14 @@
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\obj\Debug\Mocking.csprojResolveAssemblyReference.cache
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Mocking.dll
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Mocking.pdb
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Castle.Core.dll
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Moq.dll
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Castle.Core.xml
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Moq.xml
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\obj\Debug\Mocking.dll
+c:\users\sist\documents\visual studio 2015\Projects\Mocking\Mocking\obj\Debug\Mocking.pdb
+C:\Users\sist\Desktop\Mocking\Mocking\obj\Debug\Mocking.csprojResolveAssemblyReference.cache
+C:\Users\sist\Desktop\Mocking\Mocking\obj\Debug\Mocking.dll
+C:\Users\sist\Desktop\Mocking\Mocking\obj\Debug\Mocking.pdb
